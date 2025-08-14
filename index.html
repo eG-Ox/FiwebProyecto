@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabores de la Amazonía Peruana</title>
+    <!-- Asegúrate de que la ruta del CSS sea correcta -->
+    <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="CSS/estilos.css">
-   </head>
+</head>
+
 <body>
     <!-- Checkbox para controlar el menú (debe estar antes del header) -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -13,6 +16,7 @@
     <!-- Header Principal -->
     <header class="header">
         <div class="header__container">
+            <img src="Imagenes/logo2.jpg" alt="Logo Sabores Amazonía" class="header__logo">
             <h1 class="header__title">Sabores de la Amazonía Peruana</h1>
             <p class="header__subtitle">Descubre los tesoros culinarios de nuestra selva</p>
             
@@ -85,11 +89,20 @@
         <!-- Sección Inicio -->
         <section id="inicio" class="section section--hero">
             <div class="section__container">
-                <h2 class="section__title">Bienvenidos a la Gastronomía Amazónica</h2>
-                <p class="section__text">
-                    La Amazonía peruana alberga una riqueza culinaria incomparable, donde los sabores ancestrales 
-                    se combinan con ingredientes únicos de la selva para crear experiencias gastronómicas únicas.
-                </p>
+                <div class="hero__content">
+                    <h2 class="section__title">Bienvenidos a la Gastronomía Amazónica</h2>
+                    <p class="section__text">
+                        La Amazonía peruana alberga una riqueza culinaria incomparable, donde los sabores ancestrales 
+                        se combinan con ingredientes únicos de la selva para crear experiencias gastronómicas únicas.
+                    </p>
+                    <a href="#platos" class="cta-button">Descubre los Sabores</a>
+                </div>
+                
+                <div class="hero__image">
+                    <img src="Imagenes/portada2.jpg" 
+                         alt="Platos típicos de la gastronomía amazónica peruana" 
+                         loading="lazy">
+                </div>
             </div>
         </section>
 
@@ -126,20 +139,48 @@
                 <h2 class="section__title">Ingredientes de la Selva</h2>
                 <div class="ingredients">
                     <div class="ingredient">
-                        <h3 class="ingredient__name">Plátano Verde</h3>
-                        <p class="ingredient__description">Base fundamental de muchos platos amazónicos.</p>
+                        <div class="ingredient-inner">
+                            <div class="ingredient-front">
+                                <h3 class="ingredient__name">Plátano Verde</h3>
+                                <p class="ingredient__description">Base fundamental de muchos platos amazónicos.</p>
+                            </div>
+                            <div class="ingredient-back">
+                                <img src="Imagenes/platano.png" alt="Plátano Verde" class="ingredient__image">
+                            </div>
+                        </div>
                     </div>
                     <div class="ingredient">
-                        <h3 class="ingredient__name">Yuca</h3>
-                        <p class="ingredient__description">Tubérculo esencial en la dieta amazónica.</p>
+                        <div class="ingredient-inner">
+                            <div class="ingredient-front">
+                                <h3 class="ingredient__name">Yuca</h3>
+                                <p class="ingredient__description">Tubérculo esencial en la dieta amazónica.</p>
+                            </div>
+                            <div class="ingredient-back">
+                                <img src="Imagenes/yuca.jpg" alt="Yuca" class="ingredient__image">
+                            </div>
+                        </div>
                     </div>
                     <div class="ingredient">
-                        <h3 class="ingredient__name">Culantro</h3>
-                        <p class="ingredient__description">Hierba aromática que caracteriza los sabores selváticos.</p>
+                        <div class="ingredient-inner">
+                            <div class="ingredient-front">
+                                <h3 class="ingredient__name">Culantro</h3>
+                                <p class="ingredient__description">Hierba aromática que caracteriza los sabores selváticos.</p>
+                            </div>
+                            <div class="ingredient-back">
+                                <img src="Imagenes/culantro.jpg" alt="Culantro" class="ingredient__image">
+                            </div>
+                        </div>
                     </div>
                     <div class="ingredient">
-                        <h3 class="ingredient__name">Ají Charapita</h3>
-                        <p class="ingredient__description">El ají más pequeño y picante del mundo.</p>
+                        <div class="ingredient-inner">
+                            <div class="ingredient-front">
+                                <h3 class="ingredient__name">Ají Charapita</h3>
+                                <p class="ingredient__description">El ají más pequeño y picante del mundo.</p>
+                            </div>
+                            <div class="ingredient-back">
+                                <img src="Imagenes/aji charapita.jpg" alt="Ají Charapita" class="ingredient__image">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -176,14 +217,90 @@
         <!-- Sección Contacto -->
         <section id="contacto" class="section">
             <div class="section__container">
-                <h2 class="section__title">Contacto</h2>
-                <p class="section__text">
-                    ¿Quieres saber más sobre la gastronomía amazónica? Contáctanos para más información.
+                <h2 class="contact__title">¡Solicita Ya!</h2>
+                <p class="contact__text">
+                    ¿Quieres recibir más información sobre la gastronomía amazónica? 
+                    Completa el formulario y nos pondremos en contacto contigo.
                 </p>
-                <p class="section__text" style="text-align: center;">
-                    <strong>Email:</strong> info@saboresamazonia.pe<br>
-                    <strong>Teléfono:</strong> +51 999 888 777
-                </p>
+                
+                <div class="contact__grid">
+                    <!-- Formulario de Contacto -->
+                    <div class="contact__form-container">
+                        <h3 class="contact__form-title">Formulario de Contacto</h3>
+                        <form class="contact__form" action="#" method="POST">
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="nombre" class="form__label">Nombre *</label>
+                                    <input type="text" id="nombre" name="nombre" class="form__input" required>
+                                </div>
+                                <div class="form__group">
+                                    <label for="apellidos" class="form__label">Apellidos *</label>
+                                    <input type="text" id="apellidos" name="apellidos" class="form__input" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="email" class="form__label">Correo Electrónico *</label>
+                                    <input type="email" id="email" name="email" class="form__input" required>
+                                </div>
+                                <div class="form__group">
+                                    <label for="telefono" class="form__label">Teléfono</label>
+                                    <input type="tel" id="telefono" name="telefono" class="form__input">
+                                </div>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="interes" class="form__label">¿Qué te interesa más?</label>
+                                <select id="interes" name="interes" class="form__select">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="platos">Platos Típicos</option>
+                                    <option value="ingredientes">Ingredientes Amazónicos</option>
+                                    <option value="recetas">Recetas Tradicionales</option>
+                                    <option value="historia">Historia Culinaria</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="mensaje" class="form__label">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" class="form__textarea" rows="4" placeholder="Cuéntanos qué te gustaría saber..."></textarea>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label class="form__checkbox-label">
+                                    <input type="checkbox" name="newsletter" class="form__checkbox">
+                                    <span class="form__checkbox-text">Quiero recibir noticias y recetas por email</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="form__submit">Enviar Solicitud</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Mapa de Google Maps -->
+                    <div class="contact__map-container">
+                        <h3 class="contact__map-title">Ubicación</h3>
+                        <div class="contact__map">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819!2d-73.2476!3d-3.7497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91e0bd1e733e3c1f%3A0x3f2a2c1d1b1b1b1b!2sIquitos%2C%20Peru!5e0!3m2!1ses!2spe!4v1234567890!5m2!1ses!2spe" 
+                                width="100%" 
+                                height="400" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="contact__info">
+                            <h4>Información de Contacto</h4>
+                            <p><strong>📍 Dirección:</strong> Iquitos, Loreto, Perú</p>
+                            <p><strong>📧 Email:</strong> info@saboresamazonia.pe</p>
+                            <p><strong>📞 Teléfono:</strong> +51 999 888 777</p>
+                            <p><strong>🕒 Horario:</strong> Lun-Vie: 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -191,6 +308,19 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer__container">
+            <img src="Imagenes/logo2.jpg" alt="Logo Sabores Amazonía" class="footer__logo">
+            
+            <div class="footer__contact">
+                <h3 class="footer__contact-title">Contacto</h3>
+                <p class="footer__contact-text">
+                    ¿Quieres saber más sobre la gastronomía amazónica? Contáctanos para más información.
+                </p>
+                <div class="footer__contact-info">
+                    <p><strong>Email:</strong> info@saboresamazonia.pe</p>
+                    <p><strong>Teléfono:</strong> +51 999 888 777</p>
+                </div>
+            </div>
+            
             <p class="footer__text">&copy; 2025 Sabores de la Amazonía Peruana. Todos los derechos reservados.</p>
         </div>
     </footer>
